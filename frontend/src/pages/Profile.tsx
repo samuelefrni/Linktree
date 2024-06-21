@@ -14,6 +14,8 @@ import Finder from "../components/Finder";
 import { setOpenFinder } from "../state/finder/finderSlice";
 import { setOpenBin } from "../state/bin/binSlice";
 import Bin from "../components/Bin";
+import CVIcon from "../assets/contacts-2021-04-30.png";
+import CV from "../assets/CV(EN).pdf";
 import Logout from "../components/Logout";
 import { motion } from "framer-motion";
 
@@ -42,14 +44,14 @@ const Profile = () => {
         >
           <div className="border-[2px] border-[#686868] bg-custom-gradient h-[50px] rounded-full flex justify-between items-center md:h-[80px] md:justify-around md:p-5">
             <img
-              className="ml-2 mr-2 cursor-pointer w-[30px] md:w-[60px]"
+              className="ml-2 mr-2 cursor-pointer w-[30px] md:w-[60px] md:p-1"
               src={FinderIcon}
               alt="finder icon"
               onClick={() => dispatch(setOpenFinder())}
             />
             <div className="bg-[#686868] w-[1px] h-[30px] md:w-[3px] md:h-[50px]"></div>
             <img
-              className="ml-2 w-[33px] cursor-pointer md:w-[60px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[60px] md:p-1"
               src={InstagramIcon}
               alt="instagram icon"
               onClick={() =>
@@ -57,13 +59,13 @@ const Profile = () => {
               }
             />
             <img
-              className="ml-2 w-[33px] cursor-pointer md:w-[60px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[60px] md:p-1"
               src={XIcon}
               alt="x icon"
               onClick={() => window.open("https://x.com/samuelefrn", "_blank")}
             />
             <img
-              className="ml-2 w-[33px] cursor-pointer md:w-[60px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[60px] md:p-1"
               src={LinkedInIcon}
               alt="linkedin icon"
               onClick={() =>
@@ -74,7 +76,7 @@ const Profile = () => {
               }
             />
             <img
-              className="ml-2 w-[33px] cursor-pointer md:w-[70px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
               src={GitHubIcon}
               alt="github icon"
               onClick={() =>
@@ -82,7 +84,7 @@ const Profile = () => {
               }
             />
             <img
-              className="ml-2 w-[33px] cursor-pointer md:w-[60px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[60px] md:p-1"
               src={CameraIcon}
               alt="samuelefrni shoots"
               onClick={() =>
@@ -90,7 +92,13 @@ const Profile = () => {
               }
             />
             <img
-              className="mr-2 ml-2 w-[33px] cursor-pointer md:w-[70px]"
+              className="ml-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
+              src={CVIcon}
+              alt="Samuele Furnari cv "
+              onClick={() => window.open(CV, "_blank")}
+            />
+            <img
+              className="mr-2 ml-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
               src={BinIcon}
               alt="bin icon"
               onClick={() => dispatch(setOpenBin())}
