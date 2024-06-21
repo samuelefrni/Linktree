@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <React.StrictMode>
-      <div className="h-[8vh] flex items-center bg-custom-gradient text-white">
+      <div className="h-[10vh] flex items-center bg-custom-gradient text-white p-2">
         <FaApple
-          className="text-3xl ml-3 mr-2 cursor-pointer md:text-4xl"
+          className="text-3xl cursor-pointer m-2 md:text-4xl"
           onClick={() => dispatch(setOpenLogout())}
         />
-        <p className="text-xl ml-3 font-[600] md:text-2xl">Samuele Furnari</p>
-        <p className="ml-auto text-xl m-5 font-[600] md:text-2xl">
+        <p className="text-xl font-[600] p-2 md:text-2xl">Samuele Furnari</p>
+        <p className="ml-auto text-xl font-[600] p-2 md:text-2xl">
           {`${dayWeek[currentDate.getDay() - 1]} ${currentDate.getDate()} ${
             monthYear[currentDate.getMonth()]
           }`}
