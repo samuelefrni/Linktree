@@ -10,11 +10,11 @@ const Navbar = () => {
     <React.StrictMode>
       <div className="h-[8vh] flex items-center bg-custom-gradient text-white">
         <FaApple
-          className="text-3xl m-5 ml-3 mr-2 cursor-pointer"
+          className="text-3xl ml-3 mr-2 cursor-pointer md:text-4xl"
           onClick={() => dispatch(setOpenLogout())}
         />
-        <p className="text-xl m-5 ml-3 font-[600]">Samuele Furnari</p>
-        <p className="ml-auto text-xl m-5 font-[600]">Gio 20 Giu</p>
+        <p className="text-xl ml-3 font-[600] md:text-2xl">Samuele Furnari</p>
+        <p className="ml-auto text-xl m-5 font-[600] md:text-2xl">Gio 20 Giu</p>
       </div>
     </React.StrictMode>
   );

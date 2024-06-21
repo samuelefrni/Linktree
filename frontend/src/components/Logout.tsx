@@ -8,7 +8,7 @@ const Logout = () => {
 
   return (
     <React.StrictMode>
-      <div className="fixed bg-[#2A2521] rounded-sm top-[8.5%] left-[1.5%] w-[300px] h-[100px]">
+      <div className="fixed bg-custom-gradient rounded-sm top-[8.5%] left-[1.5%] w-[300px] h-[100px] md:left-[0.5%]">
         <p className="text-white font-[600] mr-auto p-3 opacity-50">
           Riavvia...
         </p>

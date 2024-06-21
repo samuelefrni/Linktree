@@ -16,7 +16,7 @@ const Bin = () => {
           />
           <h1 className="text-white font-[600] mr-auto">Bin</h1>
         </div>
-        <div className="h-[300px] w-[100%] bg-[#36302c] rounded-lg"></div>
+        <div className="h-[300px] w-[100%] bg-custom-gradient rounded-lg"></div>
       </div>
     </React.StrictMode>
   );
