@@ -14,7 +14,7 @@ const Bin = () => {
             className="text-red-500 mr-auto cursor-pointer"
             onClick={() => dispatch(setOpenBin())}
           />
-          <h1 className="text-white font-[600] mr-auto">Bin</h1>
+          <h1 className="text-white font-[600] mr-auto">Cestino</h1>
         </div>
         <div className="h-[300px] w-[100%] bg-custom-gradient rounded-lg"></div>
       </div>

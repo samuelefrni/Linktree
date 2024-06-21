@@ -15,6 +15,7 @@ import { setOpenFinder } from "../state/finder/finderSlice";
 import { setOpenBin } from "../state/bin/binSlice";
 import Bin from "../components/Bin";
 import Logout from "../components/Logout";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   const finderIsOpen = useSelector((state: RootState) => state.finder.isOpen);
@@ -26,14 +27,19 @@ const Profile = () => {
   return (
     <React.StrictMode>
       <Navbar />
-      <div className="h-[90vh] relative overflow-hidden flex justify-center items-end">
+      <div className="h-[76vh] relative flex justify-center items-end md:h-[90vh]">
         <div className="absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] w-[300%] md:w-[150%] xl:w-[100%]">
           <img src={Background} alt="MacOS Sierra Wallpaper" />
         </div>
         {finderIsOpen && <Finder />}
         {binIsOpen && <Bin />}
         {logoutIsOpen && <Logout />}
-        <div className="z-10 flex items-end p-5 md:w-[700px]">
+        <motion.div
+          className="z-10 flex items-end p-5"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="border-[2px] border-[#686868] bg-custom-gradient h-[50px] rounded-full flex justify-between items-center md:h-[80px] md:justify-around md:p-5">
             <img
               className="ml-2 mr-2 cursor-pointer w-[30px] md:w-[60px]"
@@ -90,7 +96,7 @@ const Profile = () => {
               onClick={() => dispatch(setOpenBin())}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </React.StrictMode>
   );

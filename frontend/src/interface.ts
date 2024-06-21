@@ -13,3 +13,6 @@ export interface ILogout {
 export interface ILandingpage {
   isOpen: boolean;
 }
+export interface ILoadingpage {
+  isLoaded: boolean;
+}
