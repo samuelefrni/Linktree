@@ -16,14 +16,17 @@ import { setOpenBin } from "../state/bin/binSlice";
 import Bin from "../components/Bin";
 import CVIcon from "../assets/contacts-2021-04-30.png";
 import CV from "../assets/CV(EN).pdf";
+import EmailIcon from "../assets/mail-2021-05-25.png";
 import Logout from "../components/Logout";
 import { motion } from "framer-motion";
+import { setOpenEmail } from "../state/email/emailSlice";
+import Email from "../components/Email";
 
 const Profile = () => {
   const finderIsOpen = useSelector((state: RootState) => state.finder.isOpen);
   const binIsOpen = useSelector((state: RootState) => state.bin.isOpen);
   const logoutIsOpen = useSelector((state: RootState) => state.logout.isOpen);
-
+  const emailIsOpen = useSelector((state: RootState) => state.email.isOpen);
   const dispatch = useDispatch();
 
   return (
@@ -36,18 +39,26 @@ const Profile = () => {
         {finderIsOpen && <Finder />}
         {binIsOpen && <Bin />}
         {logoutIsOpen && <Logout />}
+        {emailIsOpen && <Email />}
         <motion.div
-          className="z-10 flex items-end p-5"
+          className="z-10 flex items-end p-3"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           <div className="border-[2px] border-[#686868] bg-custom-gradient h-[50px] rounded-full flex justify-between items-center md:h-[80px] md:justify-around md:p-5">
-            <img
+            <motion.img
               className="ml-2 mr-2 cursor-pointer w-[30px] md:w-[60px] md:p-1"
               src={FinderIcon}
               alt="finder icon"
               onClick={() => dispatch(setOpenFinder())}
+              initial={{ y: 0 }}
+              animate={finderIsOpen ? { y: -5 } : { y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 20,
+              }}
             />
             <div className="bg-[#686868] w-[1px] h-[30px] md:w-[3px] md:h-[50px]"></div>
             <img
@@ -94,14 +105,35 @@ const Profile = () => {
             <img
               className="ml-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
               src={CVIcon}
-              alt="Samuele Furnari cv "
+              alt="Samuele Furnari cv"
               onClick={() => window.open(CV, "_blank")}
             />
-            <img
+            <motion.img
+              className="ml-2 mr-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
+              src={EmailIcon}
+              alt="Email icon"
+              onClick={() => dispatch(setOpenEmail())}
+              initial={{ y: 0 }}
+              animate={emailIsOpen ? { y: -5 } : { y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 20,
+              }}
+            />
+            <div className="bg-[#686868] w-[1px] h-[30px] md:w-[3px] md:h-[50px]"></div>
+            <motion.img
               className="mr-2 ml-2 w-[33px] cursor-pointer md:w-[70px] md:p-1"
               src={BinIcon}
               alt="bin icon"
               onClick={() => dispatch(setOpenBin())}
+              initial={{ y: 0 }}
+              animate={binIsOpen ? { y: -5 } : { y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 20,
+              }}
             />
           </div>
         </motion.div>

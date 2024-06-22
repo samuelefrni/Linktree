@@ -2,10 +2,6 @@
 <br />
 <div align="center">
   <h1 align="center">Welcome on my Linktree</h1>
-
-  <p align="center">
-    <a href="https://samuelefurnari.vercel.app">Look at it!</a>
-  </p>
 </div>
 
 ## Introduction

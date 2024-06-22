@@ -16,3 +16,7 @@ export interface ILandingpage {
 export interface ILoadingpage {
   isLoaded: boolean;
 }
+
+export interface IEmail {
+  isOpen: boolean;
+}
