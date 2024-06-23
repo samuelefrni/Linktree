@@ -20,3 +20,9 @@ export interface ILoadingpage {
 export interface IEmail {
   isOpen: boolean;
 }
+
+export interface IFormData {
+  email: string;
+  subject: string;
+  message: string;
+}

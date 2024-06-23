@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const currentDate = new Date();
 
-  const dayWeek = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
+  const dayWeek = ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"];
   const monthYear = [
     "Gen",
     "Feb",
@@ -33,7 +33,7 @@ const Navbar = () => {
         />
         <p className="text-xl font-[600] p-2 md:text-2xl">Samuele Furnari</p>
         <p className="ml-auto text-xl font-[600] p-2 md:text-2xl">
-          {`${dayWeek[currentDate.getDay() - 1]} ${currentDate.getDate()} ${
+          {`${dayWeek[currentDate.getDay()]} ${currentDate.getDate()} ${
             monthYear[currentDate.getMonth()]
           }`}
         </p>
