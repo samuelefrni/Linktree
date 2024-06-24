@@ -53,7 +53,8 @@ To install this project locally, follow these steps:
 8. Run: `node server.js` to start the server
 9. Navigate to the frontend folder
 10. Install the dependencies of the frontend folder: `npm install`
-11. Run the app with: `npm run dev`
+11. Change the axios post request in the Email component with: `http://localhost:PORT/send-email`
+12. Run the app with: `npm run dev`
 
 ## License
 
