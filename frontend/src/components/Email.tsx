@@ -30,7 +30,10 @@ const Email = () => {
   ): Promise<void> => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/send-email", formData);
+      await axios.post(
+        "https://linktree-u49r.onrender.com/send-email",
+        formData
+      );
       setFormData({
         email: "",
         subject: "",
