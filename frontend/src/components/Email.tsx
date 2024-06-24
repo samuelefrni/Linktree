@@ -44,7 +44,7 @@ const Email = () => {
 
   return (
     <React.StrictMode>
-      <div className="fixed bg-[#2A2521] rounded-lg translate-x-[-50%] translate-y-[-50%] top-[45%] left-[50%] w-[300px] md:top-[50%]">
+      <div className="fixed bg-[#2A2521] rounded-lg translate-x-[-50%] translate-y-[-50%] top-[45%] left-[50%] w-[300px] md:top-[50%] md:w-[400px]">
         <div className="flex items-center p-2">
           <IoIosCloseCircle
             className="text-red-500 mr-auto cursor-pointer"
@@ -54,7 +54,7 @@ const Email = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="h-[300px] w-[100%] bg-custom-gradient rounded-lg flex flex-col justify-center items-center"
+          className="h-[300px] w-[100%] bg-custom-gradient rounded-lg flex flex-col justify-center items-center md:h-[350px]"
         >
           <motion.input
             className="p-3 rounded-sm m-3 w-[80%] bg-gray-50"
