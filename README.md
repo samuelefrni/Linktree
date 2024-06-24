@@ -1,4 +1,4 @@
-<div align="center"><img src="./frontend/public/apple-logo-1.png" width="150px"></div>
+<div align="center"><img src="./frontend/public/favicon.png" width="150px"></div>
 <br />
 <div align="center">
   <h1 align="center">Welcome on my Linktree</h1>
